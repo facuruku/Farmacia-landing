@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Farmacia | Contacto </title>
+<link rel='stylesheet' type='text/css' href="..\css\contacto.css"/>
+<link rel="icon" type="image/png" href="..\icons\cruz.png" \>
+</head>
+
+<body>
+
+    
+<h1> Farmacia Yuanna </h1>
+
+<input type="checkbox" id="botonmenu">
+<label for="botonmenu" id="labelmenu"><img src="..\images\botonmenu.png"></label>
+    <div class="menu">
+        <ul>
+            <li><a href="..\index.html">Inicio </a></li>
+            <li><a href="info.html">Quienes somos </a></li>
+            <li class="servicios">
+                <a href="#">Servicios <p> ▼</p></a>
+                <div class="submenulinks">
+                  <a href="productos.html">Productos </a>
+                  <a href="asesoramiento.html">Asesoramiento</a>
+                  <a href="#">Tratamientos</a>
+                </div>
+              </li>
+                
+            <li class="actual"> <a href="#"> Contacto </a></li>
+        </ul>
+    </div>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <div class="caja">
+        <input id="boton1" type="reset" name="limpiar" value="Reestablecer"/>
+        <input id="boton2" type="submit" name="enviar" value="Enviar"/>
+        <fieldset>
+            <legend class="form"> Formulario de contacto</legend>
+       
+            <fieldset>
+                <legend class="datos">Datos personales</legend>
+                <table >
+                    <tr>
+                        <td><label for="nombre">Nombre: </label> </td>
+                        <td><input type="text" id="nombre" name="nombre" value="" size="20"  /></td>
+                    </tr>   
+                    <tr>
+                        <td><label for="email">Email: </label></td>
+                        <td><input type="text" id="email" name="email" value="" size="20"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tel">Telefono: </label></td>
+                        <td><input type="text" id="tlf" name="telefono" value="" size="10" maxlength="9"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">Mayor de edad</label></td>
+                        <td><input type="radio" name="edad" value="mayor"/>Sí
+                            <input type="radio" name="edad" value="menor"/>No
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="politica">Acepto politica de privacidad <acronym title="Obligatorio"> *</acronym></label></td>
+                        <td><input type="checkbox" name="politica" value="acepta"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend class="datos">Contacto</legend>
+                <table >
+                    <tr>
+                        <td> 
+                            <p>Asunto:  ac</p>
+						</td>
+					</tr>
+					<tr>	
+						<td>
+							<label for="tratamiento">Tratamiento</label> </br>
+								<select id="tratamiento" name="tratamiento" size="5" multiple="multiple">   
+							<option value="Sr.">Sr.</option>   
+							<option value="Sra.">Sra.</option>   
+							<option value="No binario">No binario</option>   
+							</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Mensaje">Mensaje</label> <br/>
+                            <textarea id="Mensaje" name="Mensaje" cols="40" rows="6">Escribe aquí tus comentarios</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="adjunto">Adjuntar foto</label>
+                            <input type="file" name="adjunto" /> 
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </fieldset>
+    </div>
+</form>
+
+<div class="piepagina">
+	<p>Todos los derechos reservados ©.</p>
+</div> 
+
+
+</body>
+
+
+
+</html>

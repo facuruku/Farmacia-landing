@@ -1,0 +1,341 @@
+body{
+    background-image: url("../images/fondo1.jpg"); 
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+h1{
+	margin-left: 8mm;
+	color: rgb(106, 235, 101);
+	text-shadow: 4mm 4mm 2mm 1px rgba(0,0,0,0.2);
+	width: 95%;
+	text-align: center;
+	background-color: rgba(66, 57, 57,0.8);
+}
+
+#botonmenu{
+	display:none;
+}
+#labelmenu img, #labelmenu{
+	width: 42px;
+	height: 42px;
+	position: relative;
+	display: none;
+}
+
+.menu{
+	width: 99%;
+	position: absolute;
+	z-index:20;
+    top: 3em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu ul {
+	list-style-type: none;
+	display:flex;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(82, 82, 82);
+	border-radius: 2mm 2mm;
+}
+
+.menu p{
+	display: inline;
+	font-size: 12px;
+}
+  
+.menu li {
+	border-right:1px solid #bbb;
+  }
+  
+.menu li:last-child,.menu li:nth-child(4) {
+	border-right: none;
+  }
+  
+.menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+  
+.menu li:hover{
+	background-color: rgba(0,0,0,0.4);
+  }
+.menu label:hover{
+	background-color: rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+
+.menu .actual {
+	background-color: rgba(17, 240, 36, 0.6);
+  }
+
+
+.submenulinks{
+	display: none;
+	position: absolute;
+	z-index:20;
+	background-color:#333;
+    min-width: 160px;
+    box-shadow:0.5em 0.5em 0.5em 0mm rgb(71, 67, 66);
+	animation-name: mostrarsubmenu;
+	animation-duration: 200ms;
+	animation-play-state: paused;
+	animation-fill-mode: both;
+}
+
+.submenulinks a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+
+.servicios:hover .submenulinks {
+	display: block;
+	animation-play-state: running;
+}
+.submenulinks a:hover{
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 2mm 2mm;
+	
+}
+
+.piepagina{
+	position: absolute;
+	width: 95%;
+	background-color: #333;
+	color: white;
+	padding: 1cm;
+	text-align: center;
+	top:25cm;
+	margin-top: 1mm;
+}
+
+
+/* ---------------------->> */
+
+#boton1, #boton2{
+    position: absolute;
+	border-style: outset;
+    border-color: rgba(94, 92, 92, 0.596);
+	background-color: rgb(82, 82, 82);
+	color:white;
+    padding: 0.8em;
+}
+
+#boton1{
+    top: 42em;
+    left: 43em;
+}
+
+#boton2{
+    top: 42em;
+    left: 52em;
+}
+
+#boton1:active, #boton2:active{
+    border-style: inset;
+}
+
+#boton1:hover,#boton2:hover{
+	background-color: rgba(26, 63, 119, 0.8);
+}
+
+.form{
+    padding: 0.4em;
+    border-radius: 2mm 2mm;
+    color: white;
+    font-weight: bold;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.253);
+
+}
+.datos{
+    background-color: rgba(17, 240, 36, 0.411);
+    padding: 0.4em;
+    border-radius: 2mm 2mm;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+fieldset{
+	float: left;
+	box-shadow:0.5em 0.5em 0.5em 0mm rgba(0, 0, 0, 0.37);
+	margin: 1em;
+	background-color: rgba(0, 0, 0, 0.342);
+}
+
+
+table{
+    border-collapse: separate;
+}
+
+.caja{
+    position: relative;
+    top: 8em;
+}
+
+td{
+	padding: 0.8em;
+	border-bottom: solid rgba(3, 2, 2, 0.411);
+	border-width: 0.12mm;
+	color: white;
+	font-weight: bold;
+}
+@media (min-width: 1049px){
+
+    #boton1{
+        top: 42em;
+        left: 60em;
+    }
+    
+    #boton2{
+        top: 42em;
+        left: 70em;
+    }
+}
+
+
+@media (max-width: 1049px) {
+
+    .caja{
+		top: 3em;
+	}
+    fieldset{
+        position: flex;
+        z-index: 1;
+    }
+    
+    td{
+		width:100%;
+    }
+    
+    #boton1{
+        top: 67em;
+        left: 5em;
+    }
+    
+    #boton2{
+        top: 67em;
+        left: 15em;
+    }
+
+    .menu{
+		display: none;
+		width: 19em;
+		height:25%;
+		top: 5.5em;
+		animation-name: mostrarmenu;
+        animation-duration: 400ms;
+	}
+
+	.menu ul{
+		flex-direction: column;
+		position: absolute;
+		overflow:visible;
+	}
+
+	#botonmenu:checked ~ .menu{
+		display: block;
+	}
+	#labelmenu img:hover{
+		transform: scale(1.2);
+		background-color: rgba(0,0,0,0.19);
+	}
+	
+	.menu p{
+		display: inline-block;
+		transform: rotate(-90deg);
+	}
+	#labelmenu img, #labelmenu{
+		display:block;
+	}
+
+	.submenulinks{
+		top:5em;
+		left:8.8em;
+		animation-name: mostrarsubmenu2;
+		animation-duration: 400ms;
+		animation-play-state: paused;
+        animation-fill-mode: both;
+	}
+
+	.piepagina{
+		top:34cm;
+	}
+
+
+}
+
+@keyframes mostrarsubmenu{
+	from{
+		display:block;
+		opacity: 0;
+		position: absolute;
+		top:5.5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+	to{
+		opacity: 1;
+		position: absolute;
+		top:2.5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+}
+
+@keyframes mostrarsubmenu2{
+	
+	from{
+		display:block;
+		opacity: 0;
+		position: absolute;
+		top:5em;
+		left:5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+	to{
+		opacity: 1;
+		position: absolute;
+		top:5em;
+		left:9.2em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+}
+
+
+@keyframes mostrarmenu{
+	from{
+		height:0%;
+	}
+	to{
+		height:23.5%;
+	}
+	
+	
+}
+

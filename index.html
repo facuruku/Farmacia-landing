@@ -1,0 +1,88 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> Farmacia | Inicio </title>
+	<link rel='stylesheet' type='text/css' href="css\index.css"/>
+	<link rel="icon" type="image/png" href="icons\cruz.png" \>
+</head>
+
+<body>
+
+<h1> Farmacia Yuanna </h1>
+
+<input type="checkbox" id="botonmenu">
+<label for="botonmenu" id="labelmenu"><img src="images/botonmenu.png"></label>
+    <div class="menu">
+        <ul>
+            <li class="actual"><a href="#">Inicio </a></li>
+            <li><a href="pages/info.html">Quienes somos </a></li>
+            <li class="servicios">
+                <a href="#">Servicios <p> ▼</p></a>
+                <div class="submenulinks">
+                  <a href="pages/productos.html">Productos </a>
+                  <a href="pages/asesoramiento.html">Asesoramiento</a>
+                  <a href="#">Tratamientos</a>
+                </div>
+              </li>
+                
+            <li> <a href="pages/contacto.html"> Contacto </a></li>
+        </ul>
+    </div>
+    
+
+  <div class="galeria">
+      <img class="pic"  src="images\interior1.jpg" />
+      <img class="pic"  src="images\interior2.jpg" />
+      <img class="pic"  src="images\interior3.jpg" />
+      <img class="pic"  src="images\interior4.jpg" />
+  </div> 
+
+
+  <script>
+  var indice = 0;
+  galeria();
+
+  function galeria() {
+    var i;
+    var foto = document.getElementsByClassName("pic");
+    for (i = 0; i < foto.length; i++) 
+    {
+      foto[i].style.display = "none"; 
+    }
+    indice++;
+    if (indice > foto.length) {indice = 1}    
+    foto[indice-1].style.display = "block";  
+    setTimeout(galeria, 3000); // cambia la imagen cada 2000ms (3seg)
+  }
+  </script>
+
+
+  <div class="noticias">
+
+      <h2> Información Alerta Sanitaria </h2>
+
+      <pre>El Consejo General de Farmacéuticos ha puesto a disposición de los farmacéuticos y de la población en general información con el fin de seguir contribuyendo a luchar contra la emergencia sanitaria del coronavirus Covid-19. En su última actualización ha incluido información para evitar los bulos. Concretamente se ha publicado en el espacio Covid-19 de la página web del consejo un nuevo documento de preguntas y respuestas para solucionar las dudas que se producen tanto entre la población general como entre profesionales farmacéuticos. Además el documento desmonta rumores y bulos que han aparecido sobre esta infección.
+      </pre> 
+
+      <a href="https://www.portalfarma.com/Profesionales/campanaspf/Asesoramiento-salud-publica/infeccion-coronavirus-2019-nCoV/Paginas/preguntas-respuestas.aspx#rumores">Información</a>
+      
+      
+      <iframe 
+          title="Video Informativo Coronavirus"
+          width="660"
+          height="415"
+          src="https://www.youtube.com/embed/AhJpNEfIFYo">
+    </iframe>
+  </div>
+ 
+
+
+  <div class="piepagina">
+  <p>Todos los derechos reservados ©.</p>
+  </div> 
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,307 @@
+body{
+	background-image: url("../images/fondo1.jpg"); 
+	font-family: Georgia;
+	height: 160%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+
+h1{
+	position: relative;
+	margin-left: 8mm;
+	color: rgb(106, 235, 101);
+	text-shadow: 4mm 4mm 2mm 1px rgba(0,0,0,0.2);
+	width: 95%;
+	text-align: center;
+	background-color: rgba(66, 57, 57,0.8);
+}
+
+#botonmenu{
+	display:none;
+}
+
+label img, label{
+	width: 42px;
+	height: 42px;
+	position: relative;
+	display: none;
+}
+
+.menu{
+	position: relative;
+	width: 98%;
+	position: fixed;
+	z-index:20;
+    top: 3em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu ul {
+	list-style-type: none;
+	display:flex;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(82, 82, 82);
+	border-radius: 2mm 2mm;
+}
+
+.menu p{
+	display: inline;
+	font-size: 12px;
+}
+  
+.menu li {
+	border-right:1px solid #bbb;
+  }
+  
+.menu li:last-child,.menu li:nth-child(4) {
+	border-right: none;
+  }
+  
+.menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+  
+.menu li:hover{
+	background-color: rgba(0,0,0,0.4);
+  }
+.menu label:hover{
+	background-color: rgba(0,0,0,0.4);
+	cursor:pointer;
+}
+
+.menu .actual {
+	background-color: rgba(17, 240, 36, 0.6);
+  }
+
+
+.submenulinks{
+	display: none;
+	position: absolute;
+	z-index:20;
+	background-color:#333;
+	min-width: 160px;
+	box-shadow:0.5em 0.5em 0.5em 0mm rgb(71, 67, 66);
+	animation-name: mostrarsubmenu;
+	animation-duration: 200ms;
+	animation-play-state: paused;
+	animation-fill-mode: both;
+}
+.submenulinks a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.servicios:hover .submenulinks {
+	display: block;
+	animation-play-state: running;
+}
+.submenulinks a:hover{
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 2mm 2mm;
+	
+}
+
+.galeria{
+	width:25cm;
+	height:15cm;
+	position:absolute;
+	z-index:1;
+	left:300px;
+	top:200px;
+}
+
+.pic{
+	position: absolute;
+	width:100%;
+	height:100%;
+	border-radius: 4mm 4mm;
+	border-style: ridge;
+	border-color: rgba(105, 105, 105,0.4);
+	box-shadow: 2mm 2mm 2mm rgba(0, 0, 0, 0.253);
+	filter: brightness(0.9);
+}
+h2{
+	background: radial-gradient(circle, rgb(212, 123, 123), lightblue);
+	border:solid;
+	border-radius: 2em 2em 2em;
+	text-align: center;
+}
+.noticias{
+	position:absolute;
+	width: 17.6cm;
+	height: 16.7cm;
+	left:400px;
+	top:900px;
+	overflow: hidden;
+}
+
+.noticias pre{
+	position:relative;
+	width:22cm;
+	left:18.5cm;
+	font-weight:bold;
+	color: black; 
+	font-size: 12pt;
+	animation-name: texto1; 
+	animation-iteration-count: infinite; 
+	animation-direction: normal; 
+	animation-duration: 30s; 
+	animation-timing-function: linear ;
+}
+.noticias a{
+	text-decoration: none;
+	background-color:  rgb(82, 82, 82);
+	color: white;
+	border-radius: 2em 2em 2em;
+	padding: 1mm;
+	font-size: 14pt;
+}
+.noticias a:hover{
+	background-color: rgba(0,0,0,0.4);
+}
+
+.noticias iframe{
+	margin-top: 1cm;
+}
+@keyframes texto1{
+	0%{
+		left:18.5cm;
+	}
+	100%{
+		left:-150cm;
+	}
+}
+
+.piepagina{
+	position: absolute;
+	width: 95%;
+	background-color: #333;
+	color: white;
+	padding: 1cm;
+	text-align: center;
+	top:43cm;
+	margin-top: 1mm;
+}
+
+
+
+@media (max-width:688px){
+
+    .menu{
+		display: none;
+		width: 19em;
+		height:25%;
+		top: 5.5em;
+		animation-name: mostrarmenu;
+        animation-duration: 400ms;
+		
+	}
+	.menu ul{
+		flex-direction: column;
+		position: absolute;
+		overflow:visible;
+	}
+
+	#botonmenu:checked ~ .menu{
+		display: block;
+	}
+	#labelmenu img:hover{
+		width: 52px;
+		height: 52px;
+		background-color: rgba(0,0,0,0.19);
+	}
+	
+	.menu p{
+		display: inline-block;
+		transform: rotate(-90deg);
+	}
+	#labelmenu img, #labelmenu{
+		display:block;
+		position: fixed;
+	}
+
+	.submenulinks{
+		top:5em;
+		left:8.8em;
+		animation-name: mostrarsubmenu2;
+		animation-duration: 400ms;
+		animation-play-state: paused;
+        animation-fill-mode: both;
+	}
+}
+
+
+@keyframes mostrarsubmenu{
+	from{
+		display:block;
+		opacity: 0;
+		position: absolute;
+		top:5.5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+	to{
+		opacity: 1;
+		position: absolute;
+		top:2.5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+}
+
+@keyframes mostrarsubmenu2{
+	
+	from{
+		display:block;
+		opacity: 0;
+		position: absolute;
+		top:5em;
+		left:5em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+	to{
+		opacity: 1;
+		position: absolute;
+		top:5em;
+		left:9.2em;
+		background-color: rgb(82, 82, 82);
+		border-radius: 2mm 2mm;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+	}
+}
+
+
+@keyframes mostrarmenu{
+	from{
+		height:0%;
+	}
+	to{
+		height:23.5%;
+	}
+}
+
+
+
+
+
+
+
